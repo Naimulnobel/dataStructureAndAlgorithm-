@@ -24,12 +24,7 @@ function collectOdd(arr){
     return result;
 }
 console.log(collectOdd([1,2,3,4,5,6,7,8,9,10]));
-function factorial(num){
-    if(num===1){
-        return 1;
-    }
-    return num*factorial(num-1);
-}
+
 function maxPower(num,power){
     if(power===0){
         return 1
@@ -41,3 +36,22 @@ function maxPower(num,power){
 }
 console.log(maxPower(2,0))
     
+function factorial(num){
+    if(num===0){
+        return 1
+    }
+    return num*factorial(num-1)
+}
+//write a function with a recursive call that takes in a number and returns the factorial of that number
+function productOfArray(arr) {
+    if(arr.length === 0) {
+        return 1;
+    }
+    return arr[0] * productOfArray(arr.slice(1));
+}
+function recursiveRange(num) {
+    if(num === 1) {
+        return 1;
+    }
+    return num + recursiveRange(num - 1);
+}
