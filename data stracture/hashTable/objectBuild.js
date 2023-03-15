@@ -21,7 +21,18 @@ class HashTable{
             
         }
     }
+    key(){
+        const newArray = [];
+        for (let i=0; i<this.data.length;i++){
+            if(this.data?.[i]){
+                newArray.push(this.data?.[i]?.[0])
+            }
+        
+        }
+        return newArray;
+    }
 }
 const hashTable = new HashTable(50)
 console.log(hashTable.set("grape",1000));
 console.log(hashTable.get("grape"));
+console.log(hashTable.key())
