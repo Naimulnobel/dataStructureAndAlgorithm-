@@ -31,9 +31,10 @@ class LinkedList{
         const array=[]
         let currentNode=this.head
         while(currentNode !==null){
-            array.push(currentNode)
+            array.push(currentNode.value)
             currentNode=currentNode.next
         }
+        return array
     }
     insert(index,value){
         if (index>=this.length){
@@ -48,7 +49,7 @@ class LinkedList{
         leader.next=newNode
         newNode.next=holdingpointer
         this.length++
-        return this
+        return this.printList()
 
     }
     teverseToIndex(index){
@@ -65,4 +66,4 @@ const myLinkedList = new LinkedList(10)
 myLinkedList.append(5)
 myLinkedList.prepend(16)
 myLinkedList.insert(1,4)
-console.log(myLinkedList)
+console.log(myLinkedList.printList())
